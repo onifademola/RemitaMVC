@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Redirecting... To GateWay</h2>
+
+
+<body onload="document.getElementById('form1').submit();">
+    <form id="form1" name="form1" action="https://stageserv.interswitchng.com/test_paydirect/pay"
+          method="post">
+        <input name="product_id" type="hidden" value="@Model.ProductId" />
+        <input name="pay_item_id" type="hidden" value="@Model.PayItemId" />
+        <input name="amount" type="hidden" value="@Model.Amount" />
+        <input name="currency" type="hidden" value="566" />
+        <input name="site_redirect_url" type="hidden" value="@Model.SiteRedirectUrl" />
+        <input name="txn_ref" type="hidden" value="@Model.TxnRef" />
+        <input name="hash" type="hidden" value="@Model.Hash" />
+    </form>
+</body>
+

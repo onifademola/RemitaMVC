@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Pay";
+}
+
+<h2>Pay</h2>
+
+@*<form id="form1" method="POST" action="http://www.remitademo.net/remita/ecomm/init.reg">
+    <div>
+        @ViewBag.payerName
+        @ViewBag.payerEmail
+        @ViewBag.payerPhone
+        @ViewBag.orderId
+        @ViewBag.merchantId
+        @ViewBag.serviceTypeId
+        @ViewBag.responseUrl
+        @ViewBag.amt
+        @ViewBag.hash
+        
+    </div>
+</form>
+<script type="text/javascript">document.getElementById("form1").submit();</script>*@
+
+<form id="form1" method="POST" action="http://www.remitademo.net/remita/ecomm/init.reg" runat="server">
+    <div>
+        <input name="payerName" type="hidden" value="@ViewBag.payerName" />
+        <input name="payerEmail" type="hidden" value="@ViewBag.payerEmail" />
+        <input name="payerPhone" type="hidden" value="@ViewBag.payerPhone" />
+        <input name="orderId" type="hidden" value="@ViewBag.orderId" />
+        <input name="merchantId" type="hidden" value="@ViewBag.merchantId" />
+        <input name="serviceTypeId" type="hidden" value="@ViewBag.serviceTypeId" />
+        <input name="responseurl" type="hidden" value="@ViewBag.responseUrl" />
+        <input name="amt" type="hidden" value="@ViewBag.amt" />
+        <input name="hash" type="hidden" value="@ViewBag.hash" />
+    </div>
+</form>
+<script type="text/javascript">document.getElementById("form1").submit();</script>
